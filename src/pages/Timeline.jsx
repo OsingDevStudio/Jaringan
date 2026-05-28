@@ -5,16 +5,13 @@ const Timeline = () => {
 
   return (
     <div 
-      className="min-h-screen bg-cover bg-center flex flex-col items-center justify-center p-6 text-center"
+      className="min-h-screen bg-cover bg-center flex flex-col items-center justify-center p-6 text-center relative"
       style={{ backgroundImage: "url('/images/4.jpeg')" }}
     >
-      {/* Overlay agar teks terbaca jelas */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Konten (Gunakan relative agar berada di atas overlay) */}
       <div className="relative z-10 flex flex-col items-center">
-        
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 drop-shadow-lg">
+        <h1 className="text-4xl font-bold text-white mb-8 drop-shadow-lg">
           HALO CANTIKUU ❤️
         </h1>
 
