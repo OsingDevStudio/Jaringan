@@ -5,18 +5,19 @@ const Kenangan = () => {
 
   const kenangan = [
     { src: '/images/kenangan.jpeg', caption: 'Pertama kali kita bertemu ✨' },
-    { src: '/images/kenangan2.jpeg', caption: 'Waktu liburan bareng 🌊' },
-    { src: '/images/kenangan3.jpeg', caption: 'Makan malam romantis 🍽️' },
-    { src: '/images/kenangan4.jpeg', caption: 'Selfie cantik kamu 📸' },
+    { src: '/images/kenangan2.jpeg', caption: 'Waktu liat senyum manismu😍' },
+    { src: '/images/kenangan3.jpeg', caption: 'Foto awal kita ketemu nih😝' },
+    { src: '/images/kenangan4.jpeg', caption: 'Selfi Kita berdua 🤩' },
     { src: '/images/kenangan5.jpeg', caption: 'Senyum yang manis 😊' },
     { src: '/images/kenangan6.jpeg', caption: 'Kenangan indah lainnya ❤️' },
-    { src: '/images/kenangan7.jpeg', caption: 'Kenangan indah lainnya ❤️' },
-    { src: '/images/kenangan8.jpeg', caption: 'Kenangan indah lainnya ❤️' },
-    { src: '/images/kenangan9.jpeg', caption: 'Kenangan indah lainnya ❤️' },
+    { src: '/images/kenangan7.jpeg', caption: 'Kita pernah sebahagia ini🤗' },
+    { src: '/images/kenangan8.jpeg', caption: 'Ehh kok nunduk 🫣' },
+    { src: '/images/kenangan9.jpeg', caption: 'Lope lope ❤️' },
     { src: '/images/kenangan10.jpeg', caption: 'Kenangan indah lainnya ❤️' },
-    { src: '/images/kenangan11.jpeg', caption: 'Kenangan indah lainnya ❤️' },
-    { src: '/images/kenangan12.jpeg', caption: 'Kenangan indah lainnya ❤️' },
-    { src: '/images/kenangan1.jpeg', caption: 'Kenangan indah lainnya ❤️' },
+    { src: '/images/kenangan11.jpeg', caption: 'Foto kita dimana nih😸' },
+    { src: '/images/kenangan12.jpeg', caption: 'Ihh manyun gatuh🫶' },
+    { src: '/images/kenangan1.jpeg', caption: 'Foto awal kita bertemu 💋' },
+    { src: '/images/kenangan13.jpeg', caption: 'Seindah wajahmu 😚' },
   ];
 
   return (

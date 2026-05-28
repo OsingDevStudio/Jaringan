@@ -7,7 +7,7 @@ const Calculator = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const navigate = useNavigate();
   
-  const secretCode = '123456'; 
+  const secretCode = '010605'; 
 
   const handlePress = (num) => {
     if (input.length < 6) setInput((prev) => prev + num);
