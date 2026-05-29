@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 @layer utilities {
+  /* Marquee: Bergerak terus tanpa jeda */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Berhenti tepat di tengah loop */
+  }
+  .animate-marquee { 
+    animation: marquee 30s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
   /* Animasi Hujan Hati */
   @keyframes fall {
     0% { transform: translateY(-10vh); opacity: 0; }
@@ -8,20 +19,6 @@
     100% { transform: translateY(100vh); opacity: 0; }
   }
   .animate-fall { animation: fall linear forwards; }
-
-  /* Animasi Marquee Halus */
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee { 
-    animation: marquee 20s linear infinite; 
-    width: fit-content;
-  }
 }
 
-body {
-  margin: 0;
-  overflow-x: hidden;
-  font-family: sans-serif;
-}
+body { margin: 0; overflow-x: hidden; }

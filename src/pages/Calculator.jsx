@@ -10,7 +10,9 @@ const Calculator = () => {
   const secretCode = '010605'; 
 
   const handlePress = (num) => {
-    if (input.length < 6) setInput((prev) => prev + num);
+    if (input.length < 6) {
+      setInput((prev) => prev + num);
+    }
   };
 
   const handleBackspace = () => setInput((prev) => prev.slice(0, -1));
@@ -26,7 +28,7 @@ const Calculator = () => {
 
   return (
     <div 
-      className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center p-4"
+      className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center p-4 overflow-hidden"
       style={{ backgroundImage: "url('/images/3.jpeg')" }}
     >
       <div className="absolute inset-0 bg-black/40"></div>
@@ -35,19 +37,24 @@ const Calculator = () => {
       {showWrong && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
           <div className="animate-zoomIn w-full max-w-xs">
-            <img src="/images/1.jpeg" className="w-full h-auto rounded-3xl shadow-2xl" />
+            <img src="/images/1.jpeg" className="w-full h-auto rounded-3xl shadow-2xl" alt="Salah" />
           </div>
         </div>
       )}
 
-      {/* Pop-up Sukses */}
+      {/* Pop-up Sukses dengan Gambar Memantul */}
       {showSuccess && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
           <div className="bg-white p-6 rounded-3xl text-center shadow-2xl animate-zoomIn w-full max-w-xs">
-            <img src="/images/2.jpeg" className="w-full h-auto rounded-2xl mb-6" />
+            {/* Gambar ini bergerak memantul */}
+            <img 
+              src="/images/2.jpeg" 
+              className="w-full h-auto rounded-2xl mb-6 animate-bounce" 
+              alt="Sukses" 
+            />
             <button 
-              onClick={() => navigate('/timeline')}
-              className="w-full bg-pink-500 text-white py-3 rounded-full font-bold text-lg hover:bg-pink-600 transition"
+              onClick={() => navigate('/quiz')}
+              className="w-full bg-pink-500 text-white py-3 rounded-full font-bold text-lg hover:bg-pink-600 transition active:scale-95"
             >
               Lanjut ya beb ❤️
             </button>
@@ -65,13 +72,17 @@ const Calculator = () => {
 
         <div className="grid grid-cols-3 gap-4">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
-            <button key={num} onClick={() => handlePress(num.toString())} className="bg-white/70 border border-white/50 p-4 rounded-full font-bold text-xl text-pink-500 hover:bg-pink-100 transition">
+            <button 
+              key={num} 
+              onClick={() => handlePress(num.toString())} 
+              className="bg-white/70 border border-white/50 p-4 rounded-full font-bold text-xl text-pink-500 hover:bg-pink-100 transition active:scale-90"
+            >
               {num}
             </button>
           ))}
-          <button onClick={handleBackspace} className="bg-gray-200/70 p-4 rounded-full text-gray-600 font-bold">⌫</button>
-          <button onClick={() => handlePress('0')} className="bg-white/70 border border-white/50 p-4 rounded-full font-bold text-xl text-pink-500 hover:bg-pink-100 transition">0</button>
-          <button onClick={handleEnter} className="bg-pink-500 text-white rounded-full font-bold shadow-lg hover:bg-pink-600 transition">OK</button>
+          <button onClick={handleBackspace} className="bg-gray-200/70 p-4 rounded-full text-gray-600 font-bold active:scale-90 transition">⌫</button>
+          <button onClick={() => handlePress('0')} className="bg-white/70 border border-white/50 p-4 rounded-full font-bold text-xl text-pink-500 hover:bg-pink-100 transition active:scale-90">0</button>
+          <button onClick={handleEnter} className="bg-pink-500 text-white rounded-full font-bold shadow-lg hover:bg-pink-600 transition active:scale-90">OK</button>
         </div>
       </div>
     </div>

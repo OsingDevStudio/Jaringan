@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Calculator from './pages/Calculator';
+import Quiz from './pages/Quiz';
 import Timeline from './pages/Timeline';
 import Birthday from './pages/Birthday';
 import Ucapan from './pages/Ucapan';
@@ -11,7 +12,6 @@ function App() {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    // Musik akan menyala saat user melakukan klik pertama di mana saja
     const playAudio = () => {
       if (audioRef.current) {
         audioRef.current.play().catch(e => console.log("Menunggu interaksi user"));
@@ -25,11 +25,11 @@ function App() {
 
   return (
     <Router>
-      {/* Musik tetap hidup di sini, di luar Routes */}
       <audio ref={audioRef} src="/musik.mp3" loop />
       
       <Routes>
         <Route path="/" element={<Calculator />} />
+        <Route path="/quiz" element={<Quiz />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/birthday" element={<Birthday />} />
         <Route path="/ucapan" element={<Ucapan />} />
